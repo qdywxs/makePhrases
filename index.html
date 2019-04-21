@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>自动造句程序</title>
+</head>
+<body>
+<script>
+  
+  function makePhrases() {
+    //1️⃣首先创建三个数组，每个都存储了用来造句的单词。
+    var words1 = ["hello","hi","goodmoring","hey","wow"];
+    var words2 = ["Oli","Oli Zhao","my friend","baby","my brother"];
+    var words3 = ["you are so cool","cool","good boy","good man","you are so kind"];
+
+    //2️⃣接着，生成三个随机数，以随机地选择三个用于造句的单词。
+    //前面我们学过，通过 Math.random() 可以生成一个0~1的数字（不包含1）。
+    //3️⃣然后将其乘以数组的长度，并用 Math.floor() 将结果向下取整，即可得到一个位于0和数组长度减1之间的整数。
+    var rand1 = Math.floor(Math.random() * words1.length);
+    var rand2 = Math.floor(Math.random() * words2.length);
+    var rand3 = Math.floor(Math.random() * words3.length);
+
+    //4️⃣然后，将随机选择的单词拼接起来。
+    var phrase = words1[rand1] + " " + words2[rand2] + " " +words3[rand3] + "!" + "~刷新页面试试，我可以不停地自动造句~";
+
+    //5️⃣最后，将结果显示出来。
+    alert(phrase);
+  }
+  makePhrases();
+
+</script>
+</body>
+</html>
